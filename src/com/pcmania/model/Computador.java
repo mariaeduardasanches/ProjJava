@@ -14,19 +14,6 @@ public class Computador {
                       HardwareBasico processador, HardwareBasico memoriaRam,
                       HardwareBasico hd, MemoriaUSB memoriaUSB,
                       SistemaOperacional sistemaOperacional) {
-        if (marca == null || marca.trim().isEmpty()) {
-            throw new IllegalArgumentException("Marca não pode ser vazia.");
-        }
-        if (modelo == null || modelo.trim().isEmpty()) {
-            throw new IllegalArgumentException("Modelo não pode ser vazio.");
-        }
-        if (preco <= 0) {
-            throw new IllegalArgumentException("Preço deve ser maior que zero.");
-        }
-        if (processador == null || memoriaRam == null || hd == null || memoriaUSB == null || sistemaOperacional == null) {
-            throw new IllegalArgumentException("Todos os componentes do computador são obrigatórios.");
-        }
-
         this.marca = marca;
         this.modelo = modelo;
         this.preco = preco;

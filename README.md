@@ -15,17 +15,16 @@ A IA foi utilizada como apoio para organização, revisão e estruturação inic
 
 ## Ajustes para seguir o PDF
 
-Para reduzir o risco de divergência com o enunciado, o projeto foi simplificado para manter apenas os conceitos explicitamente solicitados:
+Para reduzir o risco de divergência com o enunciado, o projeto foi simplificado para manter apenas os conceitos básicos de POO que aparecem no exercício e que são compatíveis com o nível de ensino atual:
 
 - encapsulamento com atributos privados;
 - uso de construtores para inicializar os atributos;
-- organização em pacotes;
-- classes separadas por responsabilidade;
-- uso de array simples, sem bibliotecas prontas como ArrayList;
-- entrada de dados do usuário apenas na parte de compra;
-- processamento do pedido com a classe ProcessarPedido.
+- organização em classes e pacotes;
+- associação entre objetos e uso de arrays;
+- processamento do pedido com a classe ProcessarPedido;
+- entrada de dados do usuário na parte de compra.
 
-Foi removida a estrutura que utilizava conceitos mais elaborados que não eram obrigatórios na atividade, como abstração/herança/polimorfismo em excesso e muitas operações de alteração de atributos por setters desnecessários.
+Foi removido qualquer conceito mais avançado que não foi explicitamente solicitado no PDF, como herança, polimorfismo, coleções prontas e validações elaboradas fora da necessidade do exercício.
 
 ## Estrutura do projeto
 

@@ -1,5 +1,8 @@
 # PC Mania - Projeto em Java
 
+Aluno: Maria Eduarda de Oliveira Sanches
+Matrícula: 9900
+
 Este projeto foi desenvolvido para atender ao exercício prático do PDF C06_EX1_PCMania, referente a Programação Orientada a Objetos.
 
 ## Objetivo

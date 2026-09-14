@@ -20,22 +20,8 @@ public class SistemaOperacional {
         return nome;
     }
 
-    public void setNome(String nome) {
-        if (nome == null || nome.trim().isEmpty()) {
-            throw new IllegalArgumentException("Nome do sistema operacional não pode ser vazio.");
-        }
-        this.nome = nome;
-    }
-
     public int getTipo() {
         return tipo;
-    }
-
-    public void setTipo(int tipo) {
-        if (tipo <= 0) {
-            throw new IllegalArgumentException("Tipo do sistema operacional deve ser maior que zero.");
-        }
-        this.tipo = tipo;
     }
 
     @Override

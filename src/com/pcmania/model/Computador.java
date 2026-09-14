@@ -23,20 +23,8 @@ public class Computador {
         if (preco <= 0) {
             throw new IllegalArgumentException("Preço deve ser maior que zero.");
         }
-        if (processador == null) {
-            throw new IllegalArgumentException("Processador não pode ser nulo.");
-        }
-        if (memoriaRam == null) {
-            throw new IllegalArgumentException("Memória RAM não pode ser nula.");
-        }
-        if (hd == null) {
-            throw new IllegalArgumentException("HD não pode ser nulo.");
-        }
-        if (memoriaUSB == null) {
-            throw new IllegalArgumentException("Memória USB não pode ser nula.");
-        }
-        if (sistemaOperacional == null) {
-            throw new IllegalArgumentException("Sistema operacional não pode ser nulo.");
+        if (processador == null || memoriaRam == null || hd == null || memoriaUSB == null || sistemaOperacional == null) {
+            throw new IllegalArgumentException("Todos os componentes do computador são obrigatórios.");
         }
 
         this.marca = marca;
@@ -53,88 +41,32 @@ public class Computador {
         return marca;
     }
 
-    public void setMarca(String marca) {
-        if (marca == null || marca.trim().isEmpty()) {
-            throw new IllegalArgumentException("Marca não pode ser vazia.");
-        }
-        this.marca = marca;
-    }
-
     public String getModelo() {
         return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        if (modelo == null || modelo.trim().isEmpty()) {
-            throw new IllegalArgumentException("Modelo não pode ser vazio.");
-        }
-        this.modelo = modelo;
     }
 
     public double getPreco() {
         return preco;
     }
 
-    public void setPreco(double preco) {
-        if (preco <= 0) {
-            throw new IllegalArgumentException("Preço deve ser maior que zero.");
-        }
-        this.preco = preco;
-    }
-
     public HardwareBasico getProcessador() {
         return processador;
-    }
-
-    public void setProcessador(HardwareBasico processador) {
-        if (processador == null) {
-            throw new IllegalArgumentException("Processador não pode ser nulo.");
-        }
-        this.processador = processador;
     }
 
     public HardwareBasico getMemoriaRam() {
         return memoriaRam;
     }
 
-    public void setMemoriaRam(HardwareBasico memoriaRam) {
-        if (memoriaRam == null) {
-            throw new IllegalArgumentException("Memória RAM não pode ser nula.");
-        }
-        this.memoriaRam = memoriaRam;
-    }
-
     public HardwareBasico getHd() {
         return hd;
-    }
-
-    public void setHd(HardwareBasico hd) {
-        if (hd == null) {
-            throw new IllegalArgumentException("HD não pode ser nulo.");
-        }
-        this.hd = hd;
     }
 
     public MemoriaUSB getMemoriaUSB() {
         return memoriaUSB;
     }
 
-    public void setMemoriaUSB(MemoriaUSB memoriaUSB) {
-        if (memoriaUSB == null) {
-            throw new IllegalArgumentException("Memória USB não pode ser nula.");
-        }
-        this.memoriaUSB = memoriaUSB;
-    }
-
     public SistemaOperacional getSistemaOperacional() {
         return sistemaOperacional;
-    }
-
-    public void setSistemaOperacional(SistemaOperacional sistemaOperacional) {
-        if (sistemaOperacional == null) {
-            throw new IllegalArgumentException("Sistema operacional não pode ser nulo.");
-        }
-        this.sistemaOperacional = sistemaOperacional;
     }
 
     @Override

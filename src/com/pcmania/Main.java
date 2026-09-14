@@ -13,8 +13,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Informe sua matricula:");
-        int matricula = Integer.parseInt(scanner.nextLine());
+        int matricula = lerInteiro(scanner, "Informe sua matricula:");
 
         System.out.println("Informe seu nome:");
         String nome = scanner.nextLine();
@@ -37,7 +36,7 @@ public class Main {
             System.out.println("2 - Promocao 2");
             System.out.println("3 - Promocao 3");
             System.out.println("0 - Finalizar compra");
-            opcao = scanner.nextInt();
+            opcao = lerInteiro(scanner, "Digite a opcao:");
 
             if (opcao == 1) {
                 computadores[quantidade] = criarPromocao1(matricula);
@@ -68,6 +67,17 @@ public class Main {
 
         System.out.println("\n=== Pedido ===");
         ProcessarPedido.processarPedido(compra);
+    }
+
+    private static int lerInteiro(Scanner scanner, String mensagem) {
+        while (true) {
+            System.out.println(mensagem);
+            try {
+                return Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Valor invalido. Digite apenas numeros.");
+            }
+        }
     }
 
     private static Computador criarPromocao1(int matricula) {

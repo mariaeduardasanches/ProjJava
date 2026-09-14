@@ -10,10 +10,11 @@ import com.pcmania.service.ProcessarPedido;
 import java.util.Scanner;
 
 public class Main {
-    private static final int MATRICULA = 9900;
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Informe sua matricula:");
+        int matricula = Integer.parseInt(scanner.nextLine());
 
         System.out.println("Informe seu nome:");
         String nome = scanner.nextLine();
@@ -39,13 +40,13 @@ public class Main {
             opcao = scanner.nextInt();
 
             if (opcao == 1) {
-                computadores[quantidade] = criarPromocao1();
+                computadores[quantidade] = criarPromocao1(matricula);
                 quantidade++;
             } else if (opcao == 2) {
-                computadores[quantidade] = criarPromocao2();
+                computadores[quantidade] = criarPromocao2(matricula);
                 quantidade++;
             } else if (opcao == 3) {
-                computadores[quantidade] = criarPromocao3();
+                computadores[quantidade] = criarPromocao3(matricula);
                 quantidade++;
             } else if (opcao != 0) {
                 System.out.println("Opcao invalida!");
@@ -69,11 +70,11 @@ public class Main {
         ProcessarPedido.processarPedido(compra);
     }
 
-    private static Computador criarPromocao1() {
+    private static Computador criarPromocao1(int matricula) {
         return new Computador(
                 "Apple",
                 "Promocao 1",
-                MATRICULA,
+                matricula,
                 new HardwareBasico("Pentium Core i5", 2200),
                 new HardwareBasico("Memoria RAM", 8),
                 new HardwareBasico("HD", 500),
@@ -82,11 +83,11 @@ public class Main {
         );
     }
 
-    private static Computador criarPromocao2() {
+    private static Computador criarPromocao2(int matricula) {
         return new Computador(
                 "Samsung",
                 "Promocao 2",
-                MATRICULA + 1,
+                matricula + 1,
                 new HardwareBasico("Pentium Core i7", 3370),
                 new HardwareBasico("Memoria RAM", 16),
                 new HardwareBasico("HD", 1000),
@@ -95,11 +96,11 @@ public class Main {
         );
     }
 
-    private static Computador criarPromocao3() {
+    private static Computador criarPromocao3(int matricula) {
         return new Computador(
                 "Dell",
                 "Promocao 3",
-                MATRICULA + 2,
+                matricula + 2,
                 new HardwareBasico("Pentium Core i7", 4500),
                 new HardwareBasico("Memoria RAM", 32),
                 new HardwareBasico("HD", 2000),

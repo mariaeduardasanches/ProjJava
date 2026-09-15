@@ -16,9 +16,4 @@ public class MemoriaUSB {
     public int getCapacidade() {
         return capacidade;
     }
-
-    @Override
-    public String toString() {
-        return nome + " - " + capacidade + " GB";
-    }
 }

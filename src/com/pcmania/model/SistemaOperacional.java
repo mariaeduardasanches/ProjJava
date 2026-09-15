@@ -16,9 +16,4 @@ public class SistemaOperacional {
     public int getTipo() {
         return tipo;
     }
-
-    @Override
-    public String toString() {
-        return nome + " - " + tipo + " bits";
-    }
 }

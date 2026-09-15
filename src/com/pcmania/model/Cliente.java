@@ -22,13 +22,4 @@ public class Cliente {
     public String getEndereco() {
         return endereco;
     }
-
-    @Override
-    public String toString() {
-        return "Cliente{" +
-                "nome='" + nome + '\'' +
-                ", email='" + email + '\'' +
-                ", endereco='" + endereco + '\'' +
-                '}';
-    }
 }

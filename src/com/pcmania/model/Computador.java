@@ -55,18 +55,4 @@ public class Computador {
     public SistemaOperacional getSistemaOperacional() {
         return sistemaOperacional;
     }
-
-    @Override
-    public String toString() {
-        return "Computador{" +
-                "marca='" + marca + '\'' +
-                ", modelo='" + modelo + '\'' +
-                ", preco=" + preco +
-                ", processador=" + processador +
-                ", memoriaRam=" + memoriaRam +
-                ", hd=" + hd +
-                ", memoriaUSB=" + memoriaUSB +
-                ", sistemaOperacional=" + sistemaOperacional +
-                '}';
-    }
 }
